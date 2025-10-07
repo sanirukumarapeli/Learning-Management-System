@@ -1,0 +1,72 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="CourseSubjects" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0d290d8d-150a-4ace-80ad-8f460a27f2fa">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="EAD_DB"/>
+	<query language="SQL"><![CDATA[SELECT 
+    Course.courseID,
+    Course.courseName,
+    Subject.subjectName
+FROM 
+    Course
+JOIN 
+    Subject
+ON 
+    Course.courseID = Subject.courseID
+]]></query>
+	<field name="courseID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="courseID"/>
+		<property name="com.jaspersoft.studio.field.label" value="courseID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="course"/>
+	</field>
+	<field name="courseName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="courseName"/>
+		<property name="com.jaspersoft.studio.field.label" value="courseName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="course"/>
+	</field>
+	<field name="subjectName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="subjectName"/>
+		<property name="com.jaspersoft.studio.field.label" value="subjectName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subject"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="60" splitType="Stretch">
+		<element kind="staticText" uuid="56bdeb1f-e39f-4eac-ab95-b24458abeab1" x="89" y="0" width="360" height="40" fontSize="25.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[NexEd Academy ]]></text>
+		</element>
+		<element kind="staticText" uuid="11034997-8ca0-4e06-949e-3d471c515dc9" x="109" y="30" width="340" height="30" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[No:43, Vigayarama Mawatha, Colombo 07]]></text>
+		</element>
+	</title>
+	<pageHeader height="40" splitType="Stretch">
+		<element kind="staticText" uuid="f37339ac-86e7-4a56-b187-dd8bd32f740d" x="100" y="10" width="340" height="30" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Courses and Subjects Report]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="944edd8f-09aa-4fad-b2ef-071753915b1e" x="31" y="18" width="100" height="30" bold="true">
+			<text><![CDATA[Course ID]]></text>
+		</element>
+		<element kind="staticText" uuid="766dc80e-b0bc-4ed6-9420-e6a0cfc907b9" x="180" y="15" width="100" height="30" bold="true">
+			<text><![CDATA[Course Name]]></text>
+		</element>
+		<element kind="staticText" uuid="60a16a6b-16fc-44e7-a172-95143adfd24f" x="310" y="15" width="100" height="30" bold="true">
+			<text><![CDATA[Subject Name]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<element kind="textField" uuid="acb5e5f8-60ae-4dab-93d7-a27e877ecce6" x="30" y="10" width="100" height="30">
+				<expression><![CDATA[$F{courseID}]]></expression>
+			</element>
+			<element kind="textField" uuid="5f563821-ab97-475f-8a69-984efbfcc58e" x="180" y="10" width="100" height="30">
+				<expression><![CDATA[$F{courseName}]]></expression>
+			</element>
+			<element kind="textField" uuid="deb861c5-90e5-4684-ad5b-0c84b4e3aca6" x="310" y="10" width="100" height="30">
+				<expression><![CDATA[$F{subjectName}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

@@ -1,0 +1,86 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="StudentDetails" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="499621d4-434c-40a1-98c2-908a58ca3f3f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="EAD_DB"/>
+	<query language="SQL"><![CDATA[SELECT * FROM Student
+
+]]></query>
+	<field name="studentID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="studentID"/>
+		<property name="com.jaspersoft.studio.field.label" value="studentID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="studentName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="studentName"/>
+		<property name="com.jaspersoft.studio.field.label" value="studentName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="studentNIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="studentNIC"/>
+		<property name="com.jaspersoft.studio.field.label" value="studentNIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="studentContactNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="studentContactNo"/>
+		<property name="com.jaspersoft.studio.field.label" value="studentContactNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="studentEmail" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="studentEmail"/>
+		<property name="com.jaspersoft.studio.field.label" value="studentEmail"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="staticText" uuid="65dd23e3-6784-4024-a6c1-e9970a8486af" x="109" y="40" width="340" height="30" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[No:43, Vigayarama Mawatha, Colombo 07]]></text>
+		</element>
+		<element kind="staticText" uuid="f2bef01c-9e17-470d-9505-1e9f3aed532c" x="100" y="10" width="360" height="40" fontSize="25.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[NexEd Academy ]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="4c662ca0-6c8d-4de8-917a-99ce05f193a7" x="109" y="0" width="340" height="30" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Student Details Report]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="61" splitType="Stretch">
+		<element kind="staticText" uuid="139b515f-0744-48bf-8430-410a0905258c" x="0" y="31" width="100" height="30" bold="true">
+			<text><![CDATA[Student ID]]></text>
+		</element>
+		<element kind="staticText" uuid="a63c864e-fd46-4155-8357-e9567d7e187c" x="110" y="31" width="100" height="30" bold="true">
+			<text><![CDATA[Name]]></text>
+		</element>
+		<element kind="staticText" uuid="03809701-c69c-4856-90c7-33e74c3b5b35" x="220" y="31" width="100" height="30" bold="true">
+			<text><![CDATA[NIC]]></text>
+		</element>
+		<element kind="staticText" uuid="40d67a46-dfba-450b-941b-7c9043803852" x="330" y="31" width="100" height="30" bold="true">
+			<text><![CDATA[Contact NO:]]></text>
+		</element>
+		<element kind="staticText" uuid="79b3ad18-f135-424e-937a-d0922242d2aa" x="440" y="31" width="100" height="30" bold="true">
+			<text><![CDATA[Email]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<element kind="textField" uuid="04190175-e352-41a5-9a64-e676363029a5" x="0" y="20" width="100" height="30">
+				<expression><![CDATA[$F{studentID}]]></expression>
+			</element>
+			<element kind="textField" uuid="f3adcc90-f758-45e5-9e85-cf560ae320e3" x="110" y="20" width="100" height="30">
+				<expression><![CDATA[$F{studentName}]]></expression>
+			</element>
+			<element kind="textField" uuid="405cdfed-5b50-450d-9fe0-77abc955a45d" x="220" y="20" width="100" height="30">
+				<expression><![CDATA[$F{studentNIC}]]></expression>
+			</element>
+			<element kind="textField" uuid="d9346fce-a480-4775-a1fe-45d0114a5cf1" x="440" y="20" width="100" height="30">
+				<expression><![CDATA[$F{studentEmail}]]></expression>
+			</element>
+			<element kind="textField" uuid="8eb6eba3-859f-4ddf-827c-480ebd959818" x="330" y="20" width="100" height="30">
+				<expression><![CDATA[$F{studentContactNo}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

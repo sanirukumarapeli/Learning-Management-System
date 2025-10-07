@@ -1,0 +1,84 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="LecturerDetails" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="326cf0c4-622b-431a-ba24-914c35e4001a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="EAD_DB"/>
+	<query language="SQL"><![CDATA[SELECT  * FROM Lecturer]]></query>
+	<field name="lecturerID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lecturerID"/>
+		<property name="com.jaspersoft.studio.field.label" value="lecturerID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="lecturer"/>
+	</field>
+	<field name="lecturerName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lecturerName"/>
+		<property name="com.jaspersoft.studio.field.label" value="lecturerName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="lecturer"/>
+	</field>
+	<field name="lecturerNIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lecturerNIC"/>
+		<property name="com.jaspersoft.studio.field.label" value="lecturerNIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="lecturer"/>
+	</field>
+	<field name="lecturerContactNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lecturerContactNo"/>
+		<property name="com.jaspersoft.studio.field.label" value="lecturerContactNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="lecturer"/>
+	</field>
+	<field name="lecturerEmail" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lecturerEmail"/>
+		<property name="com.jaspersoft.studio.field.label" value="lecturerEmail"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="lecturer"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="74" splitType="Stretch">
+		<element kind="staticText" uuid="4b48ab88-7d4e-49ab-bb89-ef254256785f" x="99" y="0" width="360" height="40" fontSize="25.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[NexEd Academy ]]></text>
+		</element>
+		<element kind="staticText" uuid="142c80fb-50e3-4c89-9001-baed24e39405" x="109" y="40" width="340" height="30" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[No:43, Vigayarama Mawatha, Colombo 07]]></text>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="51f32811-afd5-468a-81b0-602128d860a4" x="109" y="1" width="340" height="30" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Lecturer Details Report]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="58" splitType="Stretch">
+		<element kind="staticText" uuid="bc14c9a6-1089-4466-b0de-81891dcfcaf7" x="-10" y="20" width="100" height="30" bold="true">
+			<text><![CDATA[Lecturer ID]]></text>
+		</element>
+		<element kind="staticText" uuid="2bf01628-7e7d-46a9-bfc4-fdf68af50544" x="100" y="20" width="100" height="30" bold="true">
+			<text><![CDATA[Name]]></text>
+		</element>
+		<element kind="staticText" uuid="cbd9a476-47ca-4084-a4ff-bf0892e95af1" x="210" y="20" width="100" height="30" bold="true">
+			<text><![CDATA[NIC]]></text>
+		</element>
+		<element kind="staticText" uuid="f8eff9f1-5833-4c89-999e-7e205e5a2e1e" x="320" y="20" width="100" height="30" bold="true">
+			<text><![CDATA[Contact NO:]]></text>
+		</element>
+		<element kind="staticText" uuid="a692a135-ed6f-4bc8-af32-a43d51274e95" x="430" y="20" width="100" height="30" bold="true">
+			<text><![CDATA[Email]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<element kind="textField" uuid="5134cff1-f83f-46f5-af7e-b7eac911da90" x="-10" y="10" width="100" height="30">
+				<expression><![CDATA[$F{lecturerID}]]></expression>
+			</element>
+			<element kind="textField" uuid="fd79f9fc-6769-467d-825a-6face60c5946" x="100" y="10" width="100" height="30">
+				<expression><![CDATA[$F{lecturerName}]]></expression>
+			</element>
+			<element kind="textField" uuid="57bbbb0a-85cb-4fc6-b3f6-f10e40daee12" x="210" y="10" width="100" height="30">
+				<expression><![CDATA[$F{lecturerNIC}]]></expression>
+			</element>
+			<element kind="textField" uuid="da229780-27c3-4d8b-abff-fc9e3cca41e6" x="320" y="12" width="100" height="30">
+				<expression><![CDATA[$F{lecturerContactNo}]]></expression>
+			</element>
+			<element kind="textField" uuid="d1784ced-662b-40e5-931d-4a926ba78572" x="430" y="12" width="100" height="30">
+				<expression><![CDATA[$F{lecturerEmail}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
